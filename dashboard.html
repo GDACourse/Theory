@@ -1,120 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GDA Theory Training</title>
-
-  <!-- Mobile Responsive -->
+  <title>Student Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-    }
-
-    /* Header */
-    .header {
-      background: #007bff;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    /* Video Grid */
-    .container {
-      padding: 15px;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-    }
-
-    .video-card {
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .video-title {
-      padding: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      background: #fafafa;
-    }
-
-    iframe {
-      width: 100%;
-      height: 180px;
-      border: none;
-    }
-
-    /* Mobile small screen fix */
-    @media (max-width: 480px) {
-      iframe {
-        height: 200px;
-      }
-    }
+    body { margin:0; font-family: Arial; background:#f2f2f2; }
+    .header { background:#007bff; color:#fff; padding:15px; text-align:center; font-size:20px; font-weight:bold; }
+    .menu { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; padding:15px; }
+    .menu button { padding:25px 10px; font-size:16px; font-weight:bold; border:none; border-radius:8px; background:#fff; box-shadow:0 0 8px rgba(0,0,0,0.15); }
+    .section { display:none; padding:15px; }
+    .back-btn { background:#007bff; color:#fff; border:none; padding:10px 15px; border-radius:5px; margin-bottom:10px; }
+    .video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; }
+    .video-card { background:#fff; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); overflow:hidden; }
+    .video-title { padding:10px; font-size:15px; font-weight:bold; background:#fafafa; }
+    iframe { width:100%; height:180px; border:none; }
+    .link-card { background:#fff; padding:15px; border-radius:8px; margin-bottom:10px; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+    .link-card a { text-decoration:none; color:#007bff; font-weight:bold; }
   </style>
 </head>
 
 <body>
 
-<div class="header">
-  GDA Theory Training
+<div class="header">Student Dashboard</div>
+
+<!-- MAIN MENU -->
+<div id="menu" class="menu">
+  <button onclick="openSection('recorded')">🎥 Recorded Videos</button>
+  <button onclick="openSection('institute')">🏫 Institute Videos</button>
+  <button onclick="openSection('live')">🔴 Live Lecture</button>
+  <button onclick="openSection('exam')">📝 Exam Section</button>
 </div>
 
-<div class="container">
-  <div class="video-grid">
+<!-- ================= RECORDED VIDEOS (25) ================= -->
+<div id="recorded" class="section">
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+<h3>Recorded Videos</h3>
 
-    <!-- VIDEO 1 -->
-    <div class="video-card">
-      <div class="video-title">Video 1 : Introduction</div>
-      <iframe src="https://www.youtube.com/embed/BwuJUaOzKpE" allowfullscreen></iframe>
-    </div>
+<div class="video-grid">
+<!-- Recorded 1 to 25 -->
+<!-- COPY-PASTE READY -->
+<div class="video-card"><div class="video-title">Recorded Video 1</div><iframe src="https://www.youtube.com/embed/BwuJUaOzKpE" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 2</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 3</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 4</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 5</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 6</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_6" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 7</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_7" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 8</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_8" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 9</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_9" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 10</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_10" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 11</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_11" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 12</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_12" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 13</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_13" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 14</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_14" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 15</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_15" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 16</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_16" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 17</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_17" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 18</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_18" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 19</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_19" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 20</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_20" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 21</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_21" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 22</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_22" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 23</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_23" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 24</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_24" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Recorded Video 25</div><iframe src="https://www.youtube.com/embed/VIDEO_ID_25" allowfullscreen></iframe></div>
+</div>
+</div>
 
-    <!-- VIDEO 2 -->
-    <div class="video-card">
-      <div class="video-title">Video 2 : Topic Name</div>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
-    </div>
+<!-- ================= INSTITUTE VIDEOS (25) ================= -->
+<div id="institute" class="section">
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+<h3>Institute Videos</h3>
 
-    <!-- VIDEO 3 -->
-    <div class="video-card">
-      <div class="video-title">Video 3 : Topic Name</div>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
-    </div>
+<div class="video-grid">
+<!-- Institute 1 to 25 -->
+<div class="video-card"><div class="video-title">Institute Video 1</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_1" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 2</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_2" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 3</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_3" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 4</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_4" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 5</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_5" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 6</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_6" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 7</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_7" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 8</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_8" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 9</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_9" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 10</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_10" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 11</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_11" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 12</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_12" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 13</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_13" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 14</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_14" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 15</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_15" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 16</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_16" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 17</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_17" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 18</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_18" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 19</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_19" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 20</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_20" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 21</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_21" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 22</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_22" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 23</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_23" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 24</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_24" allowfullscreen></iframe></div>
+<div class="video-card"><div class="video-title">Institute Video 25</div><iframe src="https://www.youtube.com/embed/INS_VIDEO_ID_25" allowfullscreen></iframe></div>
+</div>
+</div>
 
-    <!-- VIDEO 4 -->
-    <div class="video-card">
-      <div class="video-title">Video 4 : Topic Name</div>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
-    </div>
+<!-- LIVE & EXAM -->
+<div id="live" class="section">
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+<div class="link-card"><a href="https://meet.google.com/YOUR_MEET_LINK" target="_blank">🔴 Join Live Lecture</a></div>
+</div>
 
-    <!-- VIDEO 5 -->
-    <div class="video-card">
-      <div class="video-title">Video 5 : Topic Name</div>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
-    </div>
+<div id="exam" class="section">
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+<div class="link-card"><a href="https://examlink1.com" target="_blank">📝 Practice Test</a></div>
+</div>
 
- <!-- VIDEO 6 -->
-    <div class="video-card">
-      <div class="video-title">Video 5 : Topic Name</div>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
-    </div>
-
-     <!-- VIDEO 7 -->
-    <div class="video-card">
-      <div class="video-title">Video 5 : Topic Name</div>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
-    </div>
+<script>
+function openSection(id){
+document.getElementById("menu").style.display="none";
+document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+document.getElementById(id).style.display="block";
+}
+function goBack(){
+document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+document.getElementById("menu").style.display="grid";
+}
+</script>
 
 </body>
 </html>
-
-
